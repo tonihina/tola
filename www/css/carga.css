@@ -25,9 +25,8 @@
 .rango{
 	color: white;
 	font-size: 20px;
-	margin-top: 0px;
+	margin-top: -20px;	
 	text-align: center;
-	color: white;
 }	
 
 
@@ -39,11 +38,12 @@
 
 #caja{
 	text-align: center;
-	
+	color: black;
+	background-color: black;
 }
 
 #contenedor_carga{
-	background-color: blue; 
+	background-image: url(../img/fondoIndex.jpg);
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -70,6 +70,22 @@
 	animation: girar 1.5s linear infinite;  
 }
 
+#logoInicio{
+	
+	border-top-color: #F4266A;
+	border-top-style: groove;
+	width: 100%;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	animation: agrandar 1.5s alternate infinite ease-in;
+
+}
+
 #logo{
 	width: 200px;
 	position: absolute;
@@ -92,39 +108,51 @@
 }
 
 #explicacion{
-	background-color: black;
 	height: 100%;
-	width: 100%;
-	margin-top: 20px;
-	padding-top: 10px;
-	
-
+	width: 90%;
+	text-align: center;
+	margin-left: 5%;
+	background-color: ;
+	border-radius: 30px;
+	padding-bottom: 20px;
 }
 
 #titulo{
 	text-align: center;
 	color: white;
-	background-color: transparent;
+	
+	font-size: 30px;
+	text-shadow: 2px 2px black;
+	border-radius: 20px;
+	width: 100%;
+	margin-top: 20px;
+
 }
 
 #nombreEjercicio{
 	text-align: center;
 	background-color: transparent;
 	color: white;
+	font-size: 20px;
+	text-shadow: 2px 2px black;
+	
 }
 
 #descripcion{
+	text-shadow: 2px 2px black;
 	text-align: justify;
 	margin-top: 5%;
-	width: 80%;
-	margin-left: 10%;
+	width: 90%;
+	margin-left: 5%;
 	color: white;
-	background-color: transparent;
+	font-size: 17px;
+	font-weight: normal;
 }
 
 #muestra{
 	width: 130px;
 	height: 120px;	
+	margin-top: 10px;
  }
 
 
@@ -154,6 +182,7 @@
   text-transform: uppercase;
   transition: all 0.2s ease;
 }
+
 #boton{
    background-image: linear-gradient(#3aad02,#2c6f05);
 }
@@ -168,5 +197,11 @@
 	to{
 		transform: rotate(360deg);
 	}
+}
+
+
+@keyframes agrandar {
+  0%   {transform: scale(.4);}
+  100% {transform: scale(1);}
 }
 

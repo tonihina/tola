@@ -6,11 +6,12 @@
 	<title>Datos</title>
 	<link rel="stylesheet" type="text/css" href="css/carga.css">
 	<link rel="stylesheet" type="text/css" href="css/inicio.css"><link rel="stylesheet" type="text/css" href="css/temporizador.css">
+	<link rel="stylesheet" type="text/css" href="css/rangos.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 	
 </head>
-<body>
+<body class="fondo4">
 	<div id="contenedor_carga">
 		<img src="img/logo.png" id="logo">
 		<img src="img/flexion.gif" id="ejercicio">
@@ -26,26 +27,27 @@
 		<h2 id="titulo">Completa los siguientes datos</h2>
 		<p class="completa">
 			¿Cuál es tu peso?
-			<input type="range" id="datos" name="rangeInput" min="0" max="50" onchange="updateTextInput(this.value);"><br>
-			<input type="text" id="textInput" value="" style="background-color: black; color: white;">
+			<input type="range" name="rangeInput" min="0" max="50" class="slider" id="myRange" onchange="updateTextInput(this.value);">
+		 <p id="datoPeso" style="color: white; visibility: hidden;"> <span id="demo"></span></p>
 		</p>
-		<br>
 		<p class="completa" id="siguientePregunta" style="visibility: hidden;">
 			¿Cuál es tu Altura?
-			<input type="range" id="datos" name="rangeInput" min="100" max="230" onchange="valorAltura(this.value);"><br>
-			<input type="text" id="inputAltura" value="" style="background-color: black; color: white; margin: auto; text-align: center;">
+			<input type="range" name="rangeInput" min="100" max="220" class="slider" id="miRango" onchange="valorAltura(this.value);">
+		 <p id="mostrarDato" style="color: white; visibility: hidden;"> <span id="valor" ></span></p>
 		</p>
 
 		<p class="completa" id="preguntaDominada" style="visibility: hidden;">
+			<br>
 			¿Puedes hacer dominadas?<br>
 			 <input type="radio" name="gender" id="si" value="si" onclick="aparece(this.value);"> Si
   			<input type="radio" id="no" name="gender" value="no" onchange="desaparece(this.value);"> No<br><br>
   			<label id="preg" style="visibility: hidden; width: 80%; margin: auto;"> ¿Aproximadamente cuántas haces en un set sin descanso?</label>
-			<input type="range" id="recta" name="rangeInput" min="1" max="40" onchange="valorDominada(this.value);" style="visibility: hidden;"><br>
-			<input type="text" id="cantidadDominada" value="" style="background-color: black; color: white; margin: auto; text-align: center; visibility: hidden;">
+			<input type="range" class="slider" id="recta" name="rangeInput" min="1" max="30" onclick="valorDominada(this.value);" style="visibility: hidden;">
+			<p style="color: white; visibility: hidden;"> <span id="salida"></span></p>
 		</p>
 		
 	</div>
+	<br>
 	<footer>
 		<a href="objetivo.html" id="next" style="visibility: hidden;"><span class="siguiente">&#10152; Seguir</span></a>
 	</footer>
@@ -61,5 +63,6 @@
 	</script>
 	  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 	  <script src="js/temporizador.js"></script>
+	  <script src="js/rangos.js"></script>
 </body>
 </html>

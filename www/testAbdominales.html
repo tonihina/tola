@@ -6,11 +6,12 @@
 	<title>abdominales</title>
 	<link rel="stylesheet" type="text/css" href="css/carga.css">
 	<link rel="stylesheet" type="text/css" href="css/inicio.css"><link rel="stylesheet" type="text/css" href="css/temporizador.css">
+	<link rel="stylesheet" type="text/css" href="css/rangos.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 	
 </head>
-<body>
+<body class="fondo3">
 	<div id="contenedor_carga">
 		<img src="img/logo.png" id="logo">
 		<img src="img/flexion.gif" id="ejercicio">
@@ -24,7 +25,7 @@
 	</div>
 	<div id="explicacion">
 		<h2 id="titulo">3. Abdominales</h2>
-		<p style="width: 80%; margin: auto; color: white;">Haz las abdominales que puedas en 30 segundos, no importa si descansas, lo importante es hacerlas a tu ritmo, A los 30 segundos sonará una alarma así que no te preocupes por el tiempo...</p>
+		<p id="descripcion" >Haz las abdominales que puedas en 30 segundos, no importa si descansas, lo importante es hacerlas a tu ritmo, A los 30 segundos sonará una alarma así que no te preocupes por el tiempo...</p>
 		<div class="chronometer">
 		<div id="screen">00 : 00</div>
 		<div class="buttons">
@@ -42,9 +43,9 @@
 		</audio>
 
 		<p class="rango">BIEN HECHO</p>
-		<p class="rango">¿Cuántas abdominales hiciste?
-		<input type="range" id="rango" name="rangeInput" min="0" max="50" onchange="aumentoEjercicio(this.value);">
-		<input type="text" id="caja" value="" >
+		<p id="descripcion">¿Cuántas abdominales hiciste?
+		<input type="range" name="rangeInput" min="0" max="50" class="slider" id="myRange" onchange="aumentoEjercicio(this.value)">
+		 <p style="color: white">Cantidad de Flexiones: <span id="demo"></span></p>
 		</p>
 		
 	</div>
@@ -64,5 +65,6 @@
 	</script>
 	  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 	  <script src="js/temporizador.js"></script>
+	  <script src="js/rangos.js"></script>
 </body>
 </html>

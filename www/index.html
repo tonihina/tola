@@ -13,11 +13,7 @@
 <body>
 
 	<div id="contenedor_carga">
-		<img src="img/logo.png" id="logo">
-		<img src="img/flexion.gif" id="ejercicio">
-		<div id="carga">
-			
-		</div>
+		<img src="img/logo.png" id="logoInicio">
 	</div>
 	<nav class="navbar navbar-light bg-light" style="background-color: #da1010">
     	<img src="img/logo.png" width="90" height="50" class="d-inline-block align-top" alt="" style="background-color: transparent;">
@@ -41,11 +37,13 @@
 	</div>
 	<script type="text/javascript">
 		window.onload=function(){
+			setTimeout('ocultar()',2000);
+		}
+		function ocultar(){
 			var contenedor = document.getElementById('contenedor_carga');
 
 			contenedor.style.visibility='hidden';
 			contenedor.style.opacity='0';
-
 		}
 	</script>
 	  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
